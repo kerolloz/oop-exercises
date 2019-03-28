@@ -11,7 +11,8 @@ class Checker{
             this->tester = test;
         }
         Compilation compile(){
-            int compilationState = system("g++ " + tester);
+            string command = "g++ " + tester;
+            int compilationState = system(command.c_str());
             return (compilationState)? Compilation::FAILED : Compilation::SUCCESS ;
         }
 };
