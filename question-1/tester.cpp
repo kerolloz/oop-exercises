@@ -1,9 +1,7 @@
-#include <bits/stdc++.h>
+#include <math.h>
 #include "solution.cpp"
 
 #define endl '\n'
-
-using namespace std;
 
 int main (){
     Point p1(5, 5);
