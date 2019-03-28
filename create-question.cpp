@@ -1,6 +1,5 @@
-#include <bits/stdc++.h>
-#include <string>
 #include <iostream>
+#include <climits>
 #include <dirent.h>
 #include <sys/types.h>
 #define endl '\n'
