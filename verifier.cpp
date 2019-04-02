@@ -9,7 +9,7 @@ int main (int argc, char* argv[])
         // the second parameter is the question number to be verified
         int questionNumber = stoi(string(argv[1]));
         string questionDir = "question-" + string(argv[1]) + "/";
-        Checker c(questionDir + "solution.cpp", questionDir + "tester.cpp");
+        Checker c(questionDir + "tester.cpp");
         if(Compilation::SUCCESS == c.compile() && Test::SUCCESS == c.test())
             cout << "Correct Answer\n";
         else
