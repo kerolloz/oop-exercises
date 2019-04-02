@@ -17,7 +17,8 @@ class Checker{
         Test test(){
             std::string command = "./test";
             int returnValue = system(command.c_str());
-            return (returnValue == 0)? Test::SUCCESS : Test::FAILED; // success
+            system("rm ./test"); // remove the test binary after testing
+            return (returnValue == 0)? Test::SUCCESS : Test::FAILED; 
                 
         }
 
