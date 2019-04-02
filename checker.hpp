@@ -3,12 +3,10 @@
 
 class Checker{
     private:
-        std::string solution;
         std::string tester;
         
     public:
-        Checker(std::string sol, std::string test){
-            this->solution = sol;
+        Checker(std::string test){
             this->tester = test;
         }
         Compilation compile(){
