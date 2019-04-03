@@ -1,4 +1,4 @@
-# Question 2
+# Exercise 2
 ## Create a class called time
 has separate int member data for hours, minutes, and seconds.(make thim private)<br>
 One constructor should initialize this data to 0 <br>

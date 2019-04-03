@@ -1,4 +1,4 @@
-# Question 1
+# Exercise 1
 ## Create a class called Point 
 This class should have 2 integers(x, y) as private data members. <br>
 The constructor should set the values for x and y through parameters. <br>
