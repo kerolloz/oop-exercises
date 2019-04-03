@@ -15,21 +15,20 @@ void verify(int questionNumber) {
     else
         cout << "\tWRONG Answer.\n"
                 "\tTry Harder!\n";
-
 }
 
 int main ()
 {
     string input;
     cout << "Please enter the number(s) of the question(s) you want to verify \n"
-            "comma seperated e.g: 1,2,3\n"
+            "comma separated e.g: 1,2,3\n"
             ">> ";
     cin >> input;
     char * pch = strtok (const_cast<char*>(input.c_str()),",");
-    while (pch != NULL)
+    while (pch != nullptr)
     {
         verify(stoi(pch));
-        pch = strtok (NULL, ",");
+        pch = strtok (nullptr, ",");
     }
 
     return 0;
