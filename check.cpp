@@ -7,7 +7,7 @@ using namespace std;
 
 void verify(int questionNumber) {
     string exercisesDir = "exercises/";
-    string questionDir = "question-" + to_string(questionNumber) + "/";
+    string questionDir = "exercise-" + to_string(questionNumber) + "/";
     Checker c(exercisesDir + questionDir + "tester.cpp");
     cout << "Testing Question #"  <<  questionNumber << ":" << endl;
     if(Compilation::SUCCESS == c.compile() && Test::SUCCESS == c.test())
