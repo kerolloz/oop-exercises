@@ -1,7 +1,7 @@
 #include <string>
-#include <climits>
 #include <dirent.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -9,15 +9,18 @@ class Exercise{
     private:
         int from;
         int to;
+        inline static const string folderNameTemplate = "exercise-";
+
         void createExercise(){
-            string command = createExerciseFolderCommand + to_string(from);
+            chdir("exercises/");
+            string command = "mkdir " + folderNameTemplate + to_string(from);
 
             if(system(command.c_str()) == 0) {
                 string filesCreationCommand =
-                        "cd " + +"-" + to_string(from) + "/ &&"
+                        "cd " + folderNameTemplate + to_string(from) + "/ &&"
                         "echo '#include \"solution.cpp\"' >  tester.cpp &&"
                         "echo '# Exercise " + to_string(from) + "' > README.md &&"
-                                                        "touch solution.cpp && cd ..";
+                        "touch solution.cpp && cd ..";
                 system(filesCreationCommand.c_str());
 
                 cout << folderNameTemplate << from << " created!" << endl;
@@ -27,12 +30,12 @@ class Exercise{
                         << "\tCreated README.md" << endl;
             }
         }
+        
 
     public:
-        const static string folderNameTemplate;
 
         Exercise(){
-            this->from =this->to = calculateNextExerciseNumber(folderNameTemplate);
+            this->from =this->to = calculateNextExerciseNumber("exercises/");
         }
         Exercise(int num){
             this->from =this->to = num;
@@ -43,7 +46,7 @@ class Exercise{
             this->from = from;
             this->to = to;
         }
-    
+        
         static bool isExerciseDir(string dirName){
             if(dirName.size() <= folderNameTemplate.size()) return false;
             for(size_t i = 0; i < folderNameTemplate.size(); i++)
@@ -54,15 +57,17 @@ class Exercise{
             
         }
         static int calculateNextExerciseNumber(const char *path) {
+            // cout << path << endl;
             struct dirent *entry;
             DIR *dir = opendir(path);
             
             if (dir == NULL) {
                 return 1;
             }
-            int maxExerciseNumber = INT_MIN;
+            int maxExerciseNumber = 0;
             while ((entry = readdir(dir)) != NULL) {
                 string fileName(entry->d_name);
+                // cout << fileName << endl;
                 if(isExerciseDir(fileName)){
                     string exerciseNumber = fileName.substr(folderNameTemplate.size(), fileName.size());
                     maxExerciseNumber = max(maxExerciseNumber, stoi(exerciseNumber));
@@ -73,7 +78,7 @@ class Exercise{
             return maxExerciseNumber+1;
         }
         void create(){
-            while(from < to){
+            while(from <= to){
                 createExercise();
                 from++;
             }
