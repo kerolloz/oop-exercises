@@ -6,6 +6,8 @@
 *.lo
 *.o
 *.obj
+check
+create-exercise
 
 # Precompiled Headers
 *.gch
