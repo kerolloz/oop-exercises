@@ -15,7 +15,6 @@ void verify(int questionNumber) {
     else
         cout << "\tWRONG Answer.\n"
                 "\tTry Harder!\n";
-
 }
 
 int main ()
@@ -26,10 +25,10 @@ int main ()
             ">> ";
     cin >> input;
     char * pch = strtok (const_cast<char*>(input.c_str()),",");
-    while (pch != NULL)
+    while (pch != nullptr)
     {
         verify(stoi(pch));
-        pch = strtok (NULL, ",");
+        pch = strtok (nullptr, ",");
     }
 
     return 0;
