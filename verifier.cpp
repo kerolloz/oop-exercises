@@ -22,7 +22,7 @@ int main ()
 {
     string input;
     cout << "Please enter the number(s) of the question(s) you want to verify \n"
-            "comma seperated e.g: 1,2,3\n"
+            "comma separated e.g: 1,2,3\n"
             ">> ";
     cin >> input;
     char * pch = strtok (const_cast<char*>(input.c_str()),",");
