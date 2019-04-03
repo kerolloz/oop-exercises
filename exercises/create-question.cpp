@@ -56,8 +56,19 @@ int main (int argc, char** argv) {
 
     createQuestionFolderCommand += to_string(nextQuestionNumber);
 
-    if(system(createQuestionFolderCommand.c_str()) == 0) // system returns 0 on successful execution of command
+    if(system(createQuestionFolderCommand.c_str()) == 0) {
+        string filesCreationCommand = 
+            "cd question-" + to_string(nextQuestionNumber) + "/ &&"
+            "echo '#include \"solution.cpp\"' >  tester.cpp &&"
+            "echo '# Question " + to_string(nextQuestionNumber) + "' > README.md &&"
+            "touch solution.cpp";
+        system(filesCreationCommand.c_str());
+        cout 
+            << "Created solution.cpp" << endl 
+            << "Created tester.cpp" << endl
+            << "Created README.md" << endl;
         cout << questionFolderNameTemplate << nextQuestionNumber  << " created!" << endl;
+    }
 
     
 }

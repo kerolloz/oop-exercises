@@ -1,24 +1,35 @@
-#include<iostream>
+#include <iostream>
+#include <cstring>
 #include "checker.hpp"
+#define endl '\n'
 
 using namespace std;
 
-int main (int argc, char* argv[])
+void verify(int questionNumber) {
+    string exercisesDir = "exercises/";
+    string questionDir = "question-" + to_string(questionNumber) + "/";
+    Checker c(exercisesDir + questionDir + "tester.cpp");
+    cout << "Testing Question #"  <<  questionNumber << ":" << endl;
+    if(Compilation::SUCCESS == c.compile() && Test::SUCCESS == c.test())
+        cout << "\tCORRECT Answer!\n";
+    else
+        cout << "\tWRONG Answer.\n"
+                "\tTry Harder!\n";
+
+}
+
+int main ()
 {
-    if(argc == 2){
-        // the second parameter is the question number to be verified
-        int questionNumber = stoi(string(argv[1]));
-        string questionDir = "question-" + string(argv[1]) + "/";
-        Checker c(questionDir + "tester.cpp");
-        if(Compilation::SUCCESS == c.compile() && Test::SUCCESS == c.test())
-            cout << "Correct Answer\n";
-        else
-            cout << "Wrong Answer.\nTry Harder!\n";
-        
-            
-    }else{
-        cout << "Please add the question number to be provide as a parameter\n";
-        return 1;
+    string input;
+    cout << "Please enter the number(s) of the question(s) you want to verify \n"
+            "comma seperated e.g: 1,2,3\n"
+            ">> ";
+    cin >> input;
+    char * pch = strtok (const_cast<char*>(input.c_str()),",");
+    while (pch != NULL)
+    {
+        verify(stoi(pch));
+        pch = strtok (NULL, ",");
     }
 
     return 0;
