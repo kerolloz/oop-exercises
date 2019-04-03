@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 3.13)
-project(untitled)
+cmake_minimum_required(VERSION 3)
+project(oop-exercises)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled check.cpp)
+add_executable(check check.cpp)
+add_executable(create-exercise create-exercise.cpp)
