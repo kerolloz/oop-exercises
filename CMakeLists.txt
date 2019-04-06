@@ -6,4 +6,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin/)
 
 add_executable(check check.cpp)
 add_executable(create-exercise create-exercise.cpp)
-install(bin)
+install(TARGETS check create-exercise DESTINATION bin)
