@@ -1,2 +1,3 @@
-bin_PROGRAMS = check create-exercise			
-tut_prog_SOURCES = check.cpp create-exercise.cpp
+bin_PROGRAMS = check create_exercise		
+check_SOURCES = check.cpp 
+create_exercise_SOURCES = create-exercise.cpp
