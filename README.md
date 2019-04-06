@@ -1,4 +1,5 @@
 # C++ Object-Oriented Programming exercises
+[![Snap Status](https://build.snapcraft.io/badge/kerolloz/oop-exercises.svg)](https://build.snapcraft.io/user/kerolloz/oop-exercises)
 >Coding challenges for those who want to learn Object Oriented Programming in C++ :fire: 
 
 ## Contents
