@@ -7,9 +7,12 @@
   - [Windows](#windows)
   - [Linux](#linux)
 - [Usage](#usage)
-- [Exercises](#exercise)
+- [Exercises](/exercises)
 
 ## Installation
+### Linux
+`snap install oop-exercises`
 ### Windows
-1. You should have Code::Blocks installed with Mingw Compiler.
-1. Add mingw to your Path environment variable.
+
+
+
