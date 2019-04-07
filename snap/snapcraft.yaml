@@ -20,8 +20,8 @@ parts:
     plugin: cmake
     stage-packages: [gcc, g++, libc6]
     build-packages: 
-      - gcc-8
-      - g++-8
+      - gcc
+      - g++
 
 
   
