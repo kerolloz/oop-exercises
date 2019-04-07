@@ -1,7 +1,14 @@
 #include <string>
 #include <dirent.h>
-#include <sys/types.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+
+bool IsPathExist(const std::string &s)
+{
+  struct stat buffer;
+  return (stat (s.c_str(), &buffer) == 0);
+}
 
 using namespace std;
 
@@ -9,9 +16,12 @@ class Exercise{
     private:
         int from;
         int to;
-        inline static const string folderNameTemplate = "exercise-";
+        string folderNameTemplate;
 
         void createExercise(){
+            if(!IsPathExist("exercises/")) 
+                system("mkdir exercises/");
+
             chdir("exercises/");
             string command = "mkdir " + folderNameTemplate + to_string(from);
 
@@ -35,6 +45,7 @@ class Exercise{
     public:
 
         Exercise(){
+            folderNameTemplate = "exercise-";
             this->from =this->to = calculateNextExerciseNumber("exercises/");
         }
         Exercise(int num){
@@ -47,7 +58,7 @@ class Exercise{
             this->to = to;
         }
         
-        static bool isExerciseDir(string dirName){
+        bool isExerciseDir(string dirName){
             if(dirName.size() <= folderNameTemplate.size()) return false;
             for(size_t i = 0; i < folderNameTemplate.size(); i++)
             {
@@ -56,7 +67,7 @@ class Exercise{
             return true;
             
         }
-        static int calculateNextExerciseNumber(const char *path) {
+        int calculateNextExerciseNumber(const char *path) {
             // cout << path << endl;
             struct dirent *entry;
             DIR *dir = opendir(path);
