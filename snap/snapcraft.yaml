@@ -1,5 +1,5 @@
 name: oop-exercises
-version: 0.1
+version: 0.1.1
 summary: OOP Exercises in C++
 description: Exercises for those who to learn Object-Oriented Programming in C++
 grade: devel
@@ -13,8 +13,9 @@ apps:
     command: bin/create-exercise
 
 parts:
-  hi:
+  app:
     source: https://github.com/kerolloz/oop-exercises.git
     plugin: cmake
+
 
   
