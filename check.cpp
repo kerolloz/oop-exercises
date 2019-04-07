@@ -17,19 +17,25 @@ void verify(int questionNumber) {
                 "\tTry Harder!\n";
 }
 
-int main ()
+int main (int argc, char ** argv)
 {
     string input;
-    cout << "Please enter the number(s) of the question(s) you want to verify \n"
-            "comma separated e.g: 1,2,3\n"
-            ">> ";
-    cin >> input;
+    if(argc == 1){
+        cout << "Please enter the number(s) of the question(s) you want to verify \n"
+                "comma separated e.g: 1,2,3\n"
+                ">> ";
+        cin >> input;
+          
+    }else if(argc == 2){
+        input = argv[1];
+    }
+
     char * pch = strtok (const_cast<char*>(input.c_str()),",");
-    while (pch != nullptr)
-    {
+
+    while (pch != nullptr) {
         verify(stoi(pch));
         pch = strtok (nullptr, ",");
-    }
+    } 
 
     return 0;
 } 
