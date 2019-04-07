@@ -16,9 +16,12 @@ apps:
 
 parts:
   app:
-    source: https://github.com/kerolloz/oop-exercises.git
+    source: .
     plugin: cmake
     stage-packages: [gcc, g++, libc6]
+    build-packages: 
+      - gcc-8
+      - g++-8
 
 
   
