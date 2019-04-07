@@ -4,6 +4,6 @@ script: cmake . && make
 
 deploy:
   provider: snap
-  snap: my.snap
+  snap: kerolloz.oop-exercises
   channel: edge
   skip_cleanup: true
