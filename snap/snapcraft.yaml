@@ -16,10 +16,8 @@ parts:
   app:
     source: .
     plugin: cmake
-    stage-packages: [gcc, g++, libc6]
-    build-packages: 
-      - gcc
-      - g++
+    stage-packages: [gcc, g++, libc6] # needed inside the container
+
 
 
   
