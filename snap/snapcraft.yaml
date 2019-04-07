@@ -8,14 +8,17 @@ confinement: devmode
 apps:
   check:
     command: bin/check
+    stop-timeout: 2s
   
   create-exercise:
     command: bin/create-exercise
+    stop-timeout: 2s
 
 parts:
   app:
     source: https://github.com/kerolloz/oop-exercises.git
     plugin: cmake
+    stage-packages: [gcc, g++, libc6]
 
 
   
