@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <unistd.h>
 #include "flags.hpp"
 
 using namespace std;
@@ -7,20 +8,22 @@ class Checker{
     private:
         string tester;
         string compilerExecutable;
+        string cwd;
+        std::string get_cwd(){
+            // returns current working directory
+            char temp[1000];
+            return ( getcwd(temp, sizeof(temp)) ? std::string( temp ) : std::string("") );
+        }
     public:
 
         explicit Checker(string test) {
-            this->tester = move(test);
-
-            if(const char* env_cpp_compiler = std::getenv("CPP_COMPILER"))
-                compilerExecutable = env_cpp_compiler;
-            else
-                cout << "ERROR: Please set your CPP_COMPILER env variable!\n",
-                exit(-1);
+            tester = move(test);
+            cwd = get_cwd();
+            compilerExecutable = "g++";
         }
 
         Compilation compile(){
-            std::string command = this->compilerExecutable + " " + this->tester + " -o test";
+            std::string command = compilerExecutable + " " + cwd + "/" + tester + " -o " + cwd + "/test";
             int compilationState = system(command.c_str());
             return (compilationState)? Compilation::FAILED : Compilation::SUCCESS ;
         }
