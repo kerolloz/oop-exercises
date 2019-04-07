@@ -17,6 +17,7 @@ parts:
     source: .
     plugin: cmake
     stage-packages: [g++] # needed inside the container
+    build-packages: g++
 
 
 
