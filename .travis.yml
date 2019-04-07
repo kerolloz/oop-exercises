@@ -12,5 +12,6 @@ deploy:
     branch: master
   provider: script
   script: docker run -v $(pwd):$(pwd) -t snapcore/snapcraft sh -c "apt update -qq
-    && cd $(pwd) && snapcraft && sudo apt-get install g++ gcc && snapcraft push *.snap --release edge"
+    && cd $(pwd) && cmake -DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_C_COMPILER=$(which gcc)  
+    make CXX=$(which g++) CC=$(which gcc) snapcraft && snapcraft push *.snap --release edge"
   skip_cleanup: true
