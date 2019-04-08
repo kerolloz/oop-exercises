@@ -1,9 +1,9 @@
 name: oop-exercises
-version: 0.1.1
+version: git
 summary: OOP Exercises in C++
 description: Exercises for those who to learn Object-Oriented Programming in C++
-grade: devel
-confinement: devmode
+grade: stable
+confinement: strict
 
 apps:
   check:
