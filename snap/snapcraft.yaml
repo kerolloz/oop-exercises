@@ -14,6 +14,6 @@ apps:
 
 parts:
   app:
-    source: github.com/kerolloz/oop-exercises.git
+    source: https://github.com/kerolloz/oop-exercises.git
     plugin: cmake
     stage-packages: [g++] # needed inside the container
