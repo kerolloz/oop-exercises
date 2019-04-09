@@ -1,5 +1,5 @@
 # C++ Object-Oriented Programming exercises
-[![Snap Status](https://build.snapcraft.io/badge/kerolloz/oop-exercises.svg)](https://build.snapcraft.io/user/kerolloz/oop-exercises) [![OOP Exercises](https://snapcraft.io/oop-exercises/badge.svg)](https://snapcraft.io/oop-exercises) [![Build Status](https://travis-ci.com/kerolloz/oop-exercises.svg?branch=master)](https://travis-ci.com/kerolloz/oop-exercises)
+[![Snap Status](https://build.snapcraft.io/badge/kerolloz/oop-exercises.svg)](https://build.snapcraft.io/user/kerolloz/oop-exercises) [![OOP Exercises](https://snapcraft.io/oop-exercises/badge.svg)](https://snapcraft.io/oop-exercises) [![Build Status](https://travis-ci.com/kerolloz/oop-exercises.svg?branch=master)](https://travis-ci.com/kerolloz/oop-exercises) [![Build status](https://ci.appveyor.com/api/projects/status/m6hoai6ry1yc9793?svg=true)](https://ci.appveyor.com/project/kerolloz/oop-exercises)
 >Coding challenges for those who want to learn Object Oriented Programming in C++ :fire:
 
 ## Contents
