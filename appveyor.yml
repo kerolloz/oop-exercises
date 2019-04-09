@@ -1,5 +1,5 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install: cmake --build . --target INSTALL --config Release
+install: cmake . && mingw32-make
 build:
   verbosity: minimal
