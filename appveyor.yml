@@ -1,5 +1,5 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install: cmake . && g++ check.cpp && g++ create-exercise.cpp && cl check.cpp && cl create-exercise.cpp
+install: cmake . && cl check.cpp && cl create-exercise.cpp
 build:
   verbosity: minimal
