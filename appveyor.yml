@@ -1,5 +1,5 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install: choco install make && cmake . && make
+install: choco install make && cmake . && make .
 build:
   verbosity: minimal
