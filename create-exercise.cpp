@@ -13,10 +13,10 @@ int main (int argc, char** argv) {
         case 1:
             break;
         case 2:
-            exercise = Exercise(stoi(argv[1]));
+            exercise = Exercise(atoi(argv[1]));
             break;
         case 3:
-            exercise = Exercise(stoi(argv[1]), stoi(argv[2]));
+            exercise = Exercise(atoi(argv[1]), atoi(argv[2]));
             break;
         default:
             cout << "ERROR max parameters: 2" << endl;

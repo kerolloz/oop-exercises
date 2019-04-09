@@ -3,6 +3,13 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sstream>
+
+ template < typename T > std::string to_string( const T& n ){
+    std::ostringstream stm ;
+    stm << n ;
+    return stm.str() ;
+}
 
 bool IsPathExist(const std::string &s)
 {
@@ -81,7 +88,7 @@ class Exercise{
                 // cout << fileName << endl;
                 if(isExerciseDir(fileName)){
                     string exerciseNumber = fileName.substr(folderNameTemplate.size(), fileName.size());
-                    maxExerciseNumber = max(maxExerciseNumber, stoi(exerciseNumber));
+                    maxExerciseNumber = max(maxExerciseNumber, atoi(exerciseNumber.c_str()));
                 }
                 
             }

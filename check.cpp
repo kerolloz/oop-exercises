@@ -1,9 +1,16 @@
 #include <iostream>
 #include <cstring>
+#include <sstream>
 #include "checker.hpp"
 #define endl '\n'
 
 using namespace std;
+
+ template < typename T > std::string to_string( const T& n ){
+    std::ostringstream stm ;
+    stm << n ;
+    return stm.str() ;
+}
 
 void verify(int questionNumber) {
     string exercisesDir = "exercises/";
@@ -33,7 +40,7 @@ int main (int argc, char ** argv)
     char * pch = strtok (const_cast<char*>(input.c_str()),",");
 
     while (pch != nullptr) {
-        verify(stoi(pch));
+        verify(atoi(pch));
         pch = strtok (nullptr, ",");
     } 
 
