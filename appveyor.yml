@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-install: C:\MinGW\bin\g++.exe check.cpp
+install: C:\MinGW\bin\g++.exe --version
 artifacts:
     path: bin
     name: myApp 
