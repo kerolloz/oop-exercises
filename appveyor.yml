@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-install: cmake -G "MinGW Makefiles" -D CMAKE_CXX_COMPILER=C:\MinGW\bin\g++.exe -DCMAKE_SH="CMAKE_SH-NOTFOUND" .  && cmake --build . 
+install: cmake -DCMAKE_SH="CMAKE_SH-NOTFOUND" -G "MinGW Makefiles" -D CMAKE_CXX_COMPILER=C:\MinGW\bin\g++.exe .  && cmake --build . 
 artifacts:
     path: bin
     name: myApp 
