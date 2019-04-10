@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-install: echo $PATH;
+install: echo %path%
 artifacts:
     path: bin
     name: myApp 
