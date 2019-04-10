@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-install: C:\MinGW\bin\mingw32-g++.exe ./main.cpp
+install: C:\MinGW\bin\gcc.exe ./main.cpp
 artifacts:
     path: bin
     name: myApp 
