@@ -1,5 +1,5 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install: cmake . && mingw32-make.exe
+install: cmake -G "MinGW Makefiles" . && mingw32-make.exe
 build:
   project: oop-exercises.sln  
