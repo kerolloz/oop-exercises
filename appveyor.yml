@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-install: C:\MinGW\bin\g++.exe check.cpp -o bin/checker && C:\MinGW\bin\g++.exe create-question.cpp -o bin/create-question && echo "DONE"
+install: C:\MinGW\bin\g++.exe --version && C:\MinGW\bin\g++.exe check.cpp -o bin/checker && C:\MinGW\bin\g++.exe create-question.cpp -o bin/create-question && echo "DONE"
 artifacts:
     path: bin
     name: myApp 
