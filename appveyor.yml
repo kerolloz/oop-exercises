@@ -1,7 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-install: C:\mingw-w64\x86_64-7.2.0-posix-seh-rt_v5-rev1\bin\g++ check.cpp -o bin/checker && g++ create-exercise.cp -o bin/create-exercise
-
+build:
+    sh: cmake -G "Unix Makefiles"  && make 
 artifacts:
     path: bin
     name: myApp 
