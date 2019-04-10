@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install: g++ check.cpp -o bin/checker && g++ create-exercise.cp -o bin/create-exercise
+install: mingw-g++ check.cpp -o bin/checker; mingw32-g++ create-exercise.cp -o bin/create-exercise
 
 artifacts:
     path: bin
