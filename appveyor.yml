@@ -1,7 +1,6 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-build:
-    sh: cmake -G "Unix Makefiles"  && make 
+install: cmake -G "Unix Makefiles"  && make 
 artifacts:
     path: bin
     name: myApp 
