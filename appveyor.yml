@@ -1,6 +1,6 @@
 version: 1.0.{build}
-image: Visual Studio 2017
-install: cygwin-g++ check.cpp -o bin/checker; mingw32-g++ create-exercise.cp -o bin/create-exercise
+image: Visual Studio 2015
+install: C:\MinGW\bin\g++ check.cpp -o bin/checker && C:\MinGW\bin\g++ create-exercise.cp -o bin/create-exercise
 
 artifacts:
     path: bin
