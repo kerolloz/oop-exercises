@@ -24,5 +24,6 @@ int main (int argc, char** argv) {
     }
     
     exercise.create();
-
+    system("pause");
+    return 0;
 }

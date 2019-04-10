@@ -44,6 +44,8 @@ int main (int argc, char ** argv)
         pch = strtok (nullptr, ",");
     } 
 
+    system("pause");
+
     return 0;
 } 
 
