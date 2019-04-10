@@ -1,5 +1,5 @@
 version: 1.0.{build}
 image: Visual Studio 2017
-install: cmake -G "MSYS Makefiles" . && mingw32-make.exe
+install: cmake . && nmake
 build:
   project: oop-exercises.sln  
