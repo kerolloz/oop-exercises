@@ -3,5 +3,5 @@ image: Visual Studio 2017
 install: g++ check.cpp -o bin/checker && g++ create-exercise.cp -o bin/create-exercise
 
 artifacts:
-  - path: bin
-  name: myApp 
+    path: bin
+    name: myApp 
