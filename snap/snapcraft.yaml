@@ -3,7 +3,7 @@ version: git
 summary: OOP Exercises in C++
 description: Exercises for those who to learn Object-Oriented Programming in C++
 grade: stable
-confinement: strict
+confinement: devmode
 
 apps:
   check:
