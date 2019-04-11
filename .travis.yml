@@ -3,6 +3,6 @@ language: cpp
 script: cmake . && make
 deploy:
   provider: snap
-  snap: oop-exercises
+  snap: OOP Exercises
   channel: edge
   skip_cleanup: true
