@@ -12,4 +12,16 @@ build_script:
   - mingw32-make
 artifacts:
     path: bin
-    name: myApp 
+    name: oop-exercises
+deploy:
+  release: oop-exercises-v$(appveyor_build_version)
+  description: 'OOP Exercises for C++ students'
+  provider: GitHub
+  auth_token:
+    secure: cD3DTUOZ5cJfsjkCsg+eHyLaijR4wf+FwrDE7LTNQIEdeLF0HcU9hgmxxUcGxB2Y # your encrypted token from GitHub
+  artifact: /oop-exercises         
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 
+    APPVEYOR_REPO_TAG: true 
