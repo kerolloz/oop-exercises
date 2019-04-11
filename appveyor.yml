@@ -14,7 +14,7 @@ artifacts:
     path: bin
     name: oop-exercises
 deploy:
-  release: oop-exercises-v$(appveyor_build_version)
+  release: oop-exercises-v{build}
   description: 'OOP Exercises for C++ students'
   provider: GitHub
   auth_token:
