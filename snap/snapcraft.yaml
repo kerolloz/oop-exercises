@@ -8,9 +8,11 @@ confinement: strict
 apps:
   check:
     command: bin/check
-  
+    plugs: [personal-files]
+
   create-exercise:
     command: bin/create-exercise
+    plugs: [personal-files]
 
 parts:
   app:
