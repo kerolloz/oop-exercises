@@ -7,7 +7,7 @@ install:
   - set Qt5_DIR=%QTDIR%\lib\cmake\Qt5
   - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
 before_build:
-    - xcopy exercises/* bin/
+    - xcopy exercises/ bin/
     - cmake -DCMAKE_BUILD_TYPE=Debug -G"CodeBlocks - MinGW Makefiles" .
 build_script:
   - mingw32-make
