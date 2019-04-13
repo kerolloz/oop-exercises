@@ -11,17 +11,16 @@ before_build:
 build_script:
   - mingw32-make
 artifacts:
-    - path: bin && exercises
+    - path: bin
       name: oop-exercises
 environment:
-      APPVEYOR_REPO_TAG: true 
+  APPVEYOR_REPO_TAG: true
 deploy:
   force_update: true
   release: oop-exercises-v$(appveyor_build_version)
   description: 'OOP Exercises for C++ students'
   provider: GitHub
-  auth_token:
-    secure: cD3DTUOZ5cJfsjkCsg+eHyLaijR4wf+FwrDE7LTNQIEdeLF0HcU9hgmxxUcGxB2Y
+  auth_token: OK+/Gz455JZHNyHArZnPe/7ii1k5++8DTN+GWe0ifc6xjfu8manhMQeAR8+xVsqt
   artifact: /oop-exercises         
   draft: false
   prerelease: false
