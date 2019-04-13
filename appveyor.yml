@@ -11,7 +11,7 @@ before_build:
 build_script:
   - mingw32-make
 after_build:
-  - xcopy /s exercises bin
+  - xcopy /s exercises bin\exercises
 
 artifacts:
     - path: bin/
