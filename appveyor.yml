@@ -11,14 +11,11 @@ before_build:
 build_script:
   - mingw32-make
 artifacts:
-    - path: bin
+    - path: [bin/* exercises]
       name: oop-exercises
-    - path: exercises
-      name: exercises
 
 deploy:
 
 - provider: GitHub
-  artifacts: /.*\.zip/
   auth_token:
     secure: aIiYr0MeanCLsD/pLbbRO0XtDuSTpRor3ABjJMGPqjvlmLDvAl49TG5VtphFXSnF
