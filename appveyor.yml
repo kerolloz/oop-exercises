@@ -13,5 +13,11 @@ build_script:
 artifacts:
     - path: bin
       name: oop-exercises
-environment:
-  APPVEYOR_REPO_TAG: true
+
+deploy:
+
+- provider: GitHub
+
+  auth_token:
+
+    secure: aIiYr0MeanCLsD/pLbbRO0XtDuSTpRor3ABjJMGPqjvlmLDvAl49TG5VtphFXSnF
