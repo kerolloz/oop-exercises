@@ -11,8 +11,10 @@ before_build:
 build_script:
   - mingw32-make
 artifacts:
-    path: bin
-    name: oop-exercises
+    - path: bin
+      name: oop-exercises
+    - path: exercises
+      name: exercises
 deploy:
   force_update: true
   release: oop-exercises-v$(appveyor_build_version)
