@@ -2,13 +2,16 @@
 #include <fstream>
 #include <cstdio>
 #include <cstring>
-#include <experimental/filesystem>
+#ifndef BOOST_ALL_DYN_LINK
+#   define BOOST_ALL_DYN_LINK
+#endif 
+#include <boost/filesystem.hpp>
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <sys/stat.h>
  
-namespace fs = std::experimental::filesystem;
+namespace fs = std::boost::filesystem;
 
 int main()
 {
