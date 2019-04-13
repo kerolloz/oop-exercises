@@ -4,10 +4,6 @@ project(oop-exercises)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin/)
 
-SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} "D:/Programme/Boost/boost_1_69_0/lib")
-set(BOOST_LIBRARYDIR D:/Programme/Boost/boost_1_69_0/lib)
-
-
 add_executable(check check.cpp)
 add_executable(create-exercise create-exercise.cpp)
 add_executable(cpp17 testcpp17.cpp)
