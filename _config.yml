@@ -1,6 +1,9 @@
 theme: jekyll-theme-cayman
-title: C++ OOP Exercises
-description: site.github.description
+title: OOP Exercises
+github:
+  tar_url: 
+  zip_url:
+  releases_url:
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
