@@ -2,13 +2,13 @@
 #include <fstream>
 #include <cstdio>
 #include <cstring>
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <sys/stat.h>
  
-namespace fs = std::boost::filesystem;
+namespace fs = std::filesystem;
 
 int main()
 {
