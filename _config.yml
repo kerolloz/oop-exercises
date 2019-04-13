@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
 title: OOP Exercises
+releases: windows
 plugins:
   - jemoji
