@@ -1,4 +1,4 @@
-version: 1.0.{build}
+version: 1.1.{build}
 image: Visual Studio 2015
 install: 
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin
@@ -12,13 +12,14 @@ build_script:
   - mingw32-make
 after_build:
   - xcopy /s exercises bin\exercises\
+  - xcopy /s mingw-to-path.bat bin\
+  - xcopy /s answers bin\answers\
 
 artifacts:
     - path: bin/
       name: oop-exercises
 
 deploy:
-
 - provider: GitHub
   auth_token:
     secure: aIiYr0MeanCLsD/pLbbRO0XtDuSTpRor3ABjJMGPqjvlmLDvAl49TG5VtphFXSnF
