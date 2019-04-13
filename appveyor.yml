@@ -1,10 +1,10 @@
 version: 1.1.{build}
 image: Visual Studio 2015
 install: 
+  - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
   - set PATH=%PATH%;C:\cygwin64\bin
   - set CC=C:\cygwin64\bin\gcc.exe
   - set CXX=C:\cygwin64\bin\g++.exe
-  - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
 before_build:
     - cmake -DCMAKE_BUILD_TYPE=Debug -G"CodeBlocks - MinGW Makefiles" .
 build_script:
