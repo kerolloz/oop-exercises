@@ -11,7 +11,8 @@ before_build:
 build_script:
   - mingw32-make
 artifacts:
-    - path: [bin/* exercises]
+    - path: bin/* 
+      path: exercises
       name: oop-exercises
 
 deploy:
