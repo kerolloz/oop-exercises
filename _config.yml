@@ -1,15 +1,7 @@
 theme: jekyll-theme-cayman
 title: OOP Exercises
+show_downloads: true
 github:
-  tar_url: 
-  zip_url:
-  releases_url:
+  zip_url: /releases/latest
 plugins:
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-avatar
   - jemoji
-  - jekyll-mentions
-  - jekyll-include-cache
