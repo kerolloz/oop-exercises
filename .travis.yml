@@ -1,7 +1,7 @@
 dist: xenial
 language: cpp
 install:
-  - apt-get install g++-8
+  - sudo apt-get install g++-8
 before_script:
   - export TRAVIS_COMPILER=g++-8
   - export CXX=g++-8
