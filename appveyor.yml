@@ -19,6 +19,6 @@ artifacts:
 deploy:
 
 - provider: GitHub
-  artifacts: *.zip
+  artifacts: /.*\.zip/
   auth_token:
     secure: aIiYr0MeanCLsD/pLbbRO0XtDuSTpRor3ABjJMGPqjvlmLDvAl49TG5VtphFXSnF
