@@ -1,5 +1,11 @@
 dist: xenial
 language: cpp
+install:
+  - apt-get install g++-8
+before_script:
+  - export TRAVIS_COMPILER=g++-8
+  - export CXX=g++-8
+  - export CXX_FOR_BUILD=g++-8
 script: cmake . && make
 after_success:
 - openssl aes-256-cbc -K $encrypted_4ce617354043_key -iv $encrypted_4ce617354043_iv
