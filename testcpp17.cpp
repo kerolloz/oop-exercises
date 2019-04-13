@@ -2,9 +2,6 @@
 #include <fstream>
 #include <cstdio>
 #include <cstring>
-#ifndef BOOST_ALL_DYN_LINK
-#   define BOOST_ALL_DYN_LINK
-#endif 
 #include <boost/filesystem.hpp>
 #include <unistd.h>
 #include <sys/socket.h>
