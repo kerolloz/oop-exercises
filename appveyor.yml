@@ -2,7 +2,6 @@ version: 1.1.{build}
 image: Visual Studio 2015
 install: 
   - choco install mingw
-  - choco install codeblocks
   - set PATH=%PATH%;C:\MinGW\bin
   - set CC=C:\MinGW\bin\gcc.exe
   - set CXX=C:\MinGW\bin\g++.exe
