@@ -21,8 +21,8 @@ deploy:
     branch: master
   provider: script
   script: docker run -v $(pwd):$(pwd) -t snapcore/snapcraft sh -c "
-    sudo apt-get install software-properties-common && 
+    sudo apt-get install software-properties-common -y && 
     sudo add-apt-repository ppa:ubuntu-toolchain-r/test &&
-    sudo apt-get update &&
-    cd $(pwd) && sudo apt-get install g++-8 gcc-8 && export  CC='gcc-8' CXX='g++-8' TRAVIS_COMPILER='g++-8' CXX_FOR_BUILD='g++-8' && snapcraft && snapcraft push *.snap --release edge"
+    sudo apt-get update -y &&
+    cd $(pwd) && sudo apt-get install g++-8 gcc-8 -y && export  CC='gcc-8' CXX='g++-8' TRAVIS_COMPILER='g++-8' CXX_FOR_BUILD='g++-8' && snapcraft && snapcraft push *.snap --release edge"
   skip_cleanup: true
