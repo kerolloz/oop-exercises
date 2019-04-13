@@ -2,13 +2,13 @@ version: 1.1.{build}
 image: Visual Studio 2015
 install: 
   - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
-  - set PATH=%PATH%;C:\cygwin64\bin
+  - set PATH=%PATH%;C:\cygwin64\bin;C:\MinGW\bin
   - set CC=C:\cygwin64\bin\gcc.exe
   - set CXX=C:\cygwin64\bin\g++.exe
 before_build:
     - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SH="CMAKE_SH-NOTFOUND" -G"CodeBlocks - MinGW Makefiles" .
 build_script:
-  - make
+  - mingw32-make
 after_build:
   - xcopy /s exercises bin\exercises\
   - copy mingw-to-path.bat bin\
