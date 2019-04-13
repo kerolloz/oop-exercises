@@ -13,6 +13,8 @@ build_script:
 artifacts:
     - path: bin
       name: oop-exercises
+    - path: exercises
+      name: exercises
 
 deploy:
 

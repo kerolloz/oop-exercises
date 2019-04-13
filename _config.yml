@@ -1,7 +1,4 @@
 theme: jekyll-theme-cayman
 title: OOP Exercises
-show_downloads: true
-github:
-  zip_url: /releases/latest
 plugins:
   - jemoji
