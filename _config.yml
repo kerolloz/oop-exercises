@@ -7,3 +7,4 @@ github:
   releases_url: site.github.releases_url
 plugins:
   - jemoji
+  - "jekyll-github-metadata"
