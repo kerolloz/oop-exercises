@@ -12,7 +12,7 @@ build_script:
   - mingw32-make
 after_build:
   - xcopy /s exercises bin\exercises\
-  - xcopy /s mingw-to-path.bat bin\
+  - copy mingw-to-path.bat bin\
   - xcopy /s answers bin\answers\
 
 artifacts:
