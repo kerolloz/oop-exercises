@@ -2,9 +2,9 @@ theme: jekyll-theme-cayman
 title: OOP Exercises
 releases: windows
 github: 
-  zip_url: site.github.zip_url
-  tar_url: site.github.tar_url
-  releases_url: site.github.releases_url
+  zip_url: https://google.com
+  tar_url: https://google.com
+  releases_url: https://google.com
 plugins:
   - jemoji
-  - "jekyll-github-metadata"
+  - jekyll-github-metadata
