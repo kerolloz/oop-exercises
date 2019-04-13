@@ -1,10 +1,11 @@
 version: 1.1.{build}
 image: Visual Studio 2015
 install: 
-  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw530_32\bin
-  - set CC=C:\Qt\Tools\mingw530_32\bin\gcc.exe
-  - set CXX=C:\Qt\Tools\mingw530_32\bin\g++.exe
-  - set Qt5_DIR=%QTDIR%\lib\cmake\Qt5
+  - choco install mingw
+  - choco install codeblocks
+  - set PATH=%PATH%;C:\MinGW\bin
+  - set CC=C:\MinGW\bin\gcc.exe
+  - set CXX=C:\MinGW\bin\g++.exe
   - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
 before_build:
     - cmake -DCMAKE_BUILD_TYPE=Debug -G"CodeBlocks - MinGW Makefiles" .
