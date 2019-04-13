@@ -6,7 +6,7 @@ install:
   - set CC=C:\cygwin64\bin\gcc.exe
   - set CXX=C:\cygwin64\bin\g++.exe
 before_build:
-    - cmake -DCMAKE_BUILD_TYPE=Debug -DBOOST_ROOT=C:\Libraries\boost_1_67_0 -DCMAKE_SH="CMAKE_SH-NOTFOUND" -G"CodeBlocks - MinGW Makefiles" .
+    - cmake -DCMAKE_BUILD_TYPE=Debug -DBOOST_ROOT=C:\Libraries\boost_1_69_0 -DCMAKE_SH="CMAKE_SH-NOTFOUND" -G"CodeBlocks - MinGW Makefiles" .
 build_script:
   - mingw32-make
 after_build:
