@@ -5,6 +5,7 @@ install:
   - set PATH=%PATH%;C:\cygwin64\bin;C:\MinGW\bin
   - set CC=C:\cygwin64\bin\gcc.exe
   - set CXX=C:\cygwin64\bin\g++.exe
+  - choco install vcredist2017 
 before_build:
     - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SH="CMAKE_SH-NOTFOUND" -G"CodeBlocks - MinGW Makefiles" .
 build_script:
