@@ -7,7 +7,8 @@ addons:
     packages:
       - gcc-8
       - g++-8
-env: CC='gcc-8' CXX='g++-8' 
+before_script:
+  - export  CC='gcc-8' CXX='g++-8' TRAVIS_COMPILER='g++-8' CXX_FOR_BUILD='g++-8'
 script: cmake . && make
 after_success:
 - openssl aes-256-cbc -K $encrypted_4ce617354043_key -iv $encrypted_4ce617354043_iv
