@@ -10,4 +10,4 @@ add_executable(cpp17 testcpp17.cpp)
 
 target_link_libraries(cpp17 stdc++fs) 
 
-install(TARGETS check create-exercise DESTINATION bin)
+#install(TARGETS check create-exercise DESTINATION bin)
