@@ -1,7 +1,7 @@
 version: 1.1.{build}
-image: Visual Studio 2015
+image: Visual Studio 2017
 install: 
-  - call "%vsappiddir%..\..\VC\Auxiliary\Build\vcvars32.bat" x86
+  - call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
   - set PATH=%PATH:C:\Program Files\Git\usr\bin=% # trick to remove sh.exe
   - set PATH=%PATH%;C:\cygwin64\bin;C:\MinGW\bin
   - set CC=C:\cygwin64\bin\gcc.exe
