@@ -6,7 +6,8 @@ before_build:
   - cmake .
 build_script:
   - dir
-  - msbuild ALL_BUILD
+  - msbuild ALL_BUILD.vcxproj
+  - msbuild INSTALL.vcxproj
 after_build:
   - xcopy /s exercises bin\exercises\
   - copy mingw-to-path.bat bin\
