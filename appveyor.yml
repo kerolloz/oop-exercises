@@ -5,7 +5,8 @@ install:
 before_build:
   - cmake .
 build_script:
-  - msbuild
+  - dir
+  - msbuild ALL_BUILD
 after_build:
   - xcopy /s exercises bin\exercises\
   - copy mingw-to-path.bat bin\
